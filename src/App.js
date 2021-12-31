@@ -1,22 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import ToDoList from './ToDoList/ToDoList.js';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  apptitle: {
+    textAlign: "center"
+  }
+})
 
 function App() {
+  const classes = useStyles();
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Typography variant="h1" className={classes.apptitle}>To Do Stream</Typography>
+        <hr />
+        <ToDoList />
       </header>
     </div>
   );
